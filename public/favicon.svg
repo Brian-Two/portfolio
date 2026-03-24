@@ -1,0 +1,52 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="6" x2="58" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#14101F" />
+      <stop offset="0.52" stop-color="#09070F" />
+      <stop offset="1" stop-color="#271645" />
+    </linearGradient>
+    <linearGradient id="bFill" x1="16" y1="16" x2="38" y2="47" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4ECFF" />
+      <stop offset="0.42" stop-color="#D6BEFF" />
+      <stop offset="1" stop-color="#A868FF" />
+    </linearGradient>
+    <linearGradient id="twoFill" x1="41" y1="14" x2="51" y2="31" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B5FFE0" />
+      <stop offset="1" stop-color="#72E8B1" />
+    </linearGradient>
+    <filter id="blurGlow" x="28" y="-2" width="34" height="34" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="4.5" />
+    </filter>
+  </defs>
+
+  <rect width="64" height="64" rx="18" fill="url(#bg)" />
+  <rect x="1.25" y="1.25" width="61.5" height="61.5" rx="16.75" stroke="#E6D8FF" stroke-opacity="0.12" stroke-width="1.5" />
+
+  <circle cx="45" cy="15" r="10" fill="#9B6BFF" fill-opacity="0.34" filter="url(#blurGlow)" />
+
+  <path d="M14 16.5H49.5" stroke="#EADFFF" stroke-opacity="0.16" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M20 52H44" stroke="#EADFFF" stroke-opacity="0.16" stroke-width="1.5" stroke-linecap="round" />
+
+  <text
+    x="14.5"
+    y="45.5"
+    fill="url(#bFill)"
+    font-family="Space Grotesk, Arial Black, sans-serif"
+    font-size="34"
+    font-weight="700"
+    letter-spacing="-2"
+  >
+    B
+  </text>
+  <text
+    x="39"
+    y="28"
+    fill="url(#twoFill)"
+    font-family="Space Grotesk, Arial Black, sans-serif"
+    font-size="18"
+    font-weight="700"
+    letter-spacing="-1"
+  >
+    2
+  </text>
+</svg>

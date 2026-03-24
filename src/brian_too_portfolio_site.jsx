@@ -17,6 +17,23 @@ const projectLabels = {
   "Analyzing Bias in ML Facial Recognition": "ML study",
 };
 
+const educationThemes = {
+  "Howard University": "theme-card theme-card--howard",
+  "Google Tech Exchange Program": "theme-card theme-card--google",
+  "Bergen County Academies": "theme-card theme-card--bergen",
+};
+
+const experienceThemes = {
+  Hive: "theme-card theme-card--hive",
+  "Morgan State University": "theme-card theme-card--morgan",
+  "Bucephalus Tech": "theme-card theme-card--bucephalus",
+};
+
+const projectThemes = {
+  ASTAR: "theme-card theme-card--astar",
+  "Google Meet Email Helper": "theme-card theme-card--google-meet",
+};
+
 const SectionTitle = ({ eyebrow, title, subtitle }) => (
   <div className="mb-10">
     <div className="flex items-center gap-4">
@@ -296,11 +313,6 @@ export default function BrianTooPortfolio() {
                 <span className="micro-tag">Portfolio / 2026</span>
               </div>
 
-              <div className="mt-7 flex items-center gap-4">
-                <span className="eyebrow-line" />
-                <span className="meta-label">Built for impact, not noise</span>
-              </div>
-
               <h1 className="mt-6 max-w-4xl text-5xl font-semibold leading-none text-metal md:text-7xl lg:text-[5.4rem]">
                 {profile.name}
               </h1>
@@ -373,7 +385,13 @@ export default function BrianTooPortfolio() {
           />
           <div className="grid gap-5">
             {education.map((item) => (
-              <article key={item.school} className="tech-panel tech-panel--soft lift-panel p-6 md:p-8">
+              <article
+                key={item.school}
+                className={joinClasses(
+                  "tech-panel tech-panel--soft lift-panel p-6 md:p-8",
+                  educationThemes[item.school],
+                )}
+              >
                 <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                   <div>
                     <h3 className="text-2xl font-semibold text-metal">{item.school}</h3>
@@ -395,7 +413,13 @@ export default function BrianTooPortfolio() {
           />
           <div className="grid gap-5">
             {experience.map((job) => (
-              <article key={`${job.company}-${job.role}`} className="tech-panel tech-panel--soft lift-panel p-6 md:p-8">
+              <article
+                key={`${job.company}-${job.role}`}
+                className={joinClasses(
+                  "tech-panel tech-panel--soft lift-panel p-6 md:p-8",
+                  experienceThemes[job.company],
+                )}
+              >
                 <div className="flex flex-col gap-3 lg:flex-row lg:items-start lg:justify-between">
                   <div>
                     <div className="project-chip">{job.company}</div>
@@ -427,21 +451,17 @@ export default function BrianTooPortfolio() {
           />
           <div className="grid gap-6 lg:grid-cols-2">
             {projects.map((project) => {
-              const isFeatured = project.name === "ASTAR";
-
               return (
                 <article
                   key={project.name}
                   className={joinClasses(
                     "tech-panel lift-panel p-6 md:p-8",
-                    isFeatured ? "tech-panel--featured" : "tech-panel--soft",
+                    projectThemes[project.name] || "tech-panel--soft",
                   )}
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <span className={joinClasses("project-chip", isFeatured && "project-chip--featured")}>
-                        {projectLabels[project.name]}
-                      </span>
+                      <span className="project-chip">{projectLabels[project.name]}</span>
                       <h3 className="mt-4 text-2xl font-semibold text-metal">{project.name}</h3>
                     </div>
                     <span className="micro-tag">{project.period}</span>

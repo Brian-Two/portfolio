@@ -415,6 +415,321 @@
     color: var(--accent-metal);
   }
 
+  .theme-card {
+    --theme-title: var(--accent-metal);
+    --theme-accent-text: var(--accent-soft);
+    --theme-body: var(--text-secondary);
+    --theme-chip-border: rgba(224, 208, 255, 0.16);
+    --theme-chip-bg: rgba(255, 255, 255, 0.04);
+    --theme-chip-color: var(--text-secondary);
+    --theme-date-border: rgba(224, 208, 255, 0.16);
+    --theme-date-bg: rgba(255, 255, 255, 0.04);
+    --theme-date-color: var(--text-muted);
+    --theme-pill-border: rgba(224, 208, 255, 0.16);
+    --theme-pill-bg: rgba(255, 255, 255, 0.04);
+    --theme-pill-color: var(--accent-soft);
+    --theme-pill-dot: var(--accent-soft);
+    --theme-pill-glow: rgba(176, 124, 255, 0.34);
+    --theme-bullet-start: var(--accent-soft);
+    --theme-bullet-end: var(--accent-strong);
+    --theme-bullet-shadow: rgba(146, 82, 255, 0.14);
+    --theme-button-border: rgba(214, 194, 255, 0.16);
+    --theme-button-bg: rgba(255, 255, 255, 0.04);
+    --theme-button-hover-bg: rgba(255, 255, 255, 0.08);
+    --theme-button-color: var(--text-primary);
+    border-color: var(--theme-border, var(--panel-border));
+    background:
+      radial-gradient(circle at top right, var(--theme-orb, rgba(165, 123, 255, 0.12)), transparent 34%),
+      linear-gradient(160deg, var(--theme-bg-a, rgba(20, 14, 33, 0.88)), var(--theme-bg-b, rgba(8, 7, 13, 0.94)));
+    box-shadow:
+      0 28px 70px var(--theme-shadow, rgba(8, 6, 14, 0.46)),
+      inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  }
+
+  .theme-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(130deg, var(--theme-sheen, rgba(255, 255, 255, 0.06)), transparent 30%);
+    opacity: 0.85;
+  }
+
+  .theme-card:hover {
+    border-color: var(--theme-border-hover, var(--theme-border, rgba(224, 208, 255, 0.26)));
+    box-shadow:
+      0 34px 78px var(--theme-shadow-hover, var(--theme-shadow, rgba(8, 6, 14, 0.52))),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .theme-card .text-metal {
+    color: var(--theme-title);
+  }
+
+  .theme-card .text-accent {
+    color: var(--theme-accent-text);
+  }
+
+  .theme-card .text-body {
+    color: var(--theme-body);
+  }
+
+  .theme-card .project-chip {
+    border-color: var(--theme-chip-border);
+    background: var(--theme-chip-bg);
+    color: var(--theme-chip-color);
+  }
+
+  .theme-card .micro-tag {
+    border-color: var(--theme-date-border);
+    background: var(--theme-date-bg);
+    color: var(--theme-date-color);
+  }
+
+  .theme-card .tech-pill {
+    border-color: var(--theme-pill-border);
+    background: var(--theme-pill-bg);
+    color: var(--theme-pill-color);
+  }
+
+  .theme-card .tech-pill::before {
+    background: var(--theme-pill-dot);
+    box-shadow: 0 0 14px var(--theme-pill-glow);
+  }
+
+  .theme-card .tech-button--secondary {
+    border-color: var(--theme-button-border);
+    background: var(--theme-button-bg);
+    color: var(--theme-button-color);
+  }
+
+  .theme-card .tech-button--secondary:hover {
+    background: var(--theme-button-hover-bg);
+    border-color: var(--theme-button-border);
+  }
+
+  .theme-card .tech-list-bullet {
+    background: linear-gradient(180deg, var(--theme-bullet-start), var(--theme-bullet-end));
+    box-shadow: 0 0 0 4px var(--theme-bullet-shadow);
+  }
+
+  .theme-card--astar {
+    --theme-border: rgba(131, 236, 168, 0.28);
+    --theme-border-hover: rgba(166, 120, 255, 0.34);
+    --theme-bg-a: rgba(18, 54, 35, 0.82);
+    --theme-bg-b: rgba(32, 15, 56, 0.96);
+    --theme-orb: rgba(129, 255, 184, 0.24);
+    --theme-shadow: rgba(34, 102, 61, 0.28);
+    --theme-shadow-hover: rgba(57, 123, 83, 0.34);
+    --theme-sheen: rgba(225, 255, 237, 0.08);
+    --theme-title: #f4f0ff;
+    --theme-accent-text: #9bf2bf;
+    --theme-chip-border: rgba(175, 130, 255, 0.28);
+    --theme-chip-bg: rgba(136, 90, 255, 0.14);
+    --theme-chip-color: #eadcff;
+    --theme-date-border: rgba(131, 236, 168, 0.22);
+    --theme-date-bg: rgba(104, 227, 155, 0.11);
+    --theme-date-color: #b9ffd6;
+    --theme-pill-border: rgba(141, 239, 186, 0.2);
+    --theme-pill-bg: rgba(108, 218, 158, 0.11);
+    --theme-pill-color: #dffff0;
+    --theme-pill-dot: #91f4bd;
+    --theme-pill-glow: rgba(145, 244, 189, 0.38);
+    --theme-bullet-start: #9bf2bf;
+    --theme-bullet-end: #aa72ff;
+    --theme-bullet-shadow: rgba(117, 232, 173, 0.17);
+    --theme-button-border: rgba(156, 114, 255, 0.24);
+    --theme-button-bg: rgba(126, 88, 233, 0.13);
+    --theme-button-hover-bg: rgba(126, 88, 233, 0.18);
+    --theme-button-color: #f5efff;
+  }
+
+  .theme-card--google,
+  .theme-card--google-meet {
+    --theme-border: rgba(101, 149, 255, 0.28);
+    --theme-border-hover: rgba(122, 171, 255, 0.36);
+    --theme-title: #f6f8ff;
+    --theme-accent-text: #8bb8ff;
+    --theme-body: #d8deef;
+    --theme-chip-border: rgba(251, 188, 5, 0.22);
+    --theme-chip-bg: rgba(251, 188, 5, 0.11);
+    --theme-chip-color: #ffe7a0;
+    --theme-date-border: rgba(66, 133, 244, 0.22);
+    --theme-date-bg: rgba(66, 133, 244, 0.12);
+    --theme-date-color: #b9d4ff;
+    --theme-pill-border: rgba(66, 133, 244, 0.18);
+    --theme-pill-bg: rgba(66, 133, 244, 0.1);
+    --theme-pill-color: #dfe9ff;
+    --theme-pill-dot: #8bb8ff;
+    --theme-pill-glow: rgba(102, 158, 255, 0.34);
+    --theme-bullet-start: #5ca5ff;
+    --theme-bullet-end: #34a853;
+    --theme-bullet-shadow: rgba(66, 133, 244, 0.17);
+    --theme-button-border: rgba(66, 133, 244, 0.2);
+    --theme-button-bg: rgba(66, 133, 244, 0.11);
+    --theme-button-hover-bg: rgba(66, 133, 244, 0.16);
+    --theme-button-color: #f7faff;
+  }
+
+  .theme-card--google {
+    --theme-orb: rgba(66, 133, 244, 0.2);
+    --theme-shadow: rgba(31, 62, 116, 0.28);
+    --theme-shadow-hover: rgba(37, 75, 134, 0.34);
+    --theme-sheen: rgba(255, 255, 255, 0.07);
+    background:
+      radial-gradient(circle at 14% 18%, rgba(66, 133, 244, 0.22), transparent 22%),
+      radial-gradient(circle at 84% 16%, rgba(251, 188, 5, 0.18), transparent 18%),
+      radial-gradient(circle at 74% 80%, rgba(52, 168, 83, 0.16), transparent 20%),
+      radial-gradient(circle at 22% 78%, rgba(234, 67, 53, 0.16), transparent 18%),
+      linear-gradient(160deg, rgba(19, 32, 67, 0.88), rgba(16, 20, 35, 0.96));
+  }
+
+  .theme-card--google-meet {
+    --theme-shadow: rgba(27, 63, 111, 0.28);
+    --theme-shadow-hover: rgba(37, 79, 136, 0.34);
+    background:
+      radial-gradient(circle at 16% 18%, rgba(66, 133, 244, 0.24), transparent 22%),
+      radial-gradient(circle at 84% 18%, rgba(251, 188, 5, 0.18), transparent 16%),
+      radial-gradient(circle at 79% 76%, rgba(52, 168, 83, 0.18), transparent 22%),
+      radial-gradient(circle at 28% 84%, rgba(234, 67, 53, 0.15), transparent 18%),
+      linear-gradient(160deg, rgba(22, 34, 72, 0.88), rgba(17, 22, 37, 0.98));
+  }
+
+  .theme-card--hive {
+    --theme-border: rgba(255, 150, 61, 0.3);
+    --theme-border-hover: rgba(255, 170, 96, 0.38);
+    --theme-bg-a: rgba(48, 25, 8, 0.86);
+    --theme-bg-b: rgba(9, 8, 11, 0.98);
+    --theme-orb: rgba(255, 149, 69, 0.22);
+    --theme-shadow: rgba(111, 50, 10, 0.26);
+    --theme-shadow-hover: rgba(128, 58, 12, 0.34);
+    --theme-title: #fff6eb;
+    --theme-accent-text: #ffbf84;
+    --theme-chip-border: rgba(255, 158, 77, 0.24);
+    --theme-chip-bg: rgba(255, 145, 58, 0.13);
+    --theme-chip-color: #ffddb7;
+    --theme-date-border: rgba(255, 158, 77, 0.2);
+    --theme-date-bg: rgba(255, 145, 58, 0.09);
+    --theme-date-color: #ffc995;
+    --theme-pill-border: rgba(255, 160, 84, 0.19);
+    --theme-pill-bg: rgba(255, 145, 58, 0.1);
+    --theme-pill-color: #fff0de;
+    --theme-pill-dot: #ffbf84;
+    --theme-pill-glow: rgba(255, 164, 92, 0.32);
+    --theme-bullet-start: #ffc688;
+    --theme-bullet-end: #ff862d;
+    --theme-bullet-shadow: rgba(255, 132, 51, 0.16);
+    --theme-button-border: rgba(255, 158, 77, 0.22);
+    --theme-button-bg: rgba(255, 145, 58, 0.1);
+    --theme-button-hover-bg: rgba(255, 145, 58, 0.16);
+    --theme-button-color: #fff7ef;
+  }
+
+  .theme-card--morgan {
+    --theme-border: rgba(98, 161, 255, 0.3);
+    --theme-border-hover: rgba(124, 179, 255, 0.36);
+    --theme-bg-a: rgba(16, 38, 78, 0.88);
+    --theme-bg-b: rgba(59, 29, 12, 0.96);
+    --theme-orb: rgba(255, 144, 63, 0.2);
+    --theme-shadow: rgba(27, 63, 109, 0.28);
+    --theme-shadow-hover: rgba(37, 80, 136, 0.34);
+    --theme-title: #f4f7ff;
+    --theme-accent-text: #9ac8ff;
+    --theme-chip-border: rgba(255, 148, 67, 0.22);
+    --theme-chip-bg: rgba(255, 141, 58, 0.11);
+    --theme-chip-color: #ffd7b0;
+    --theme-date-border: rgba(98, 161, 255, 0.22);
+    --theme-date-bg: rgba(98, 161, 255, 0.11);
+    --theme-date-color: #c1dcff;
+    --theme-button-border: rgba(98, 161, 255, 0.2);
+    --theme-button-bg: rgba(98, 161, 255, 0.11);
+    --theme-button-hover-bg: rgba(98, 161, 255, 0.16);
+    --theme-button-color: #f6faff;
+    --theme-bullet-start: #9cc6ff;
+    --theme-bullet-end: #ff9739;
+    --theme-bullet-shadow: rgba(98, 161, 255, 0.16);
+  }
+
+  .theme-card--bucephalus {
+    --theme-border: rgba(218, 204, 255, 0.28);
+    --theme-border-hover: rgba(236, 229, 255, 0.34);
+    --theme-bg-a: rgba(49, 38, 74, 0.84);
+    --theme-bg-b: rgba(14, 12, 23, 0.98);
+    --theme-orb: rgba(255, 255, 255, 0.14);
+    --theme-shadow: rgba(67, 46, 110, 0.28);
+    --theme-shadow-hover: rgba(83, 59, 133, 0.34);
+    --theme-title: #ffffff;
+    --theme-accent-text: #ddd0ff;
+    --theme-chip-border: rgba(255, 255, 255, 0.18);
+    --theme-chip-bg: rgba(255, 255, 255, 0.08);
+    --theme-chip-color: #f8f4ff;
+    --theme-date-border: rgba(218, 204, 255, 0.2);
+    --theme-date-bg: rgba(170, 132, 255, 0.1);
+    --theme-date-color: #eadfff;
+    --theme-pill-border: rgba(214, 197, 255, 0.2);
+    --theme-pill-bg: rgba(206, 190, 255, 0.08);
+    --theme-pill-color: #f5f1ff;
+    --theme-pill-dot: #ffffff;
+    --theme-pill-glow: rgba(255, 255, 255, 0.28);
+    --theme-bullet-start: #ffffff;
+    --theme-bullet-end: #b68aff;
+    --theme-bullet-shadow: rgba(194, 171, 255, 0.16);
+    --theme-button-border: rgba(224, 210, 255, 0.18);
+    --theme-button-bg: rgba(214, 197, 255, 0.09);
+    --theme-button-hover-bg: rgba(214, 197, 255, 0.14);
+    --theme-button-color: #fffaff;
+  }
+
+  .theme-card--howard {
+    --theme-border: rgba(108, 143, 255, 0.28);
+    --theme-border-hover: rgba(138, 169, 255, 0.34);
+    --theme-bg-a: rgba(15, 33, 78, 0.88);
+    --theme-bg-b: rgba(65, 14, 28, 0.96);
+    --theme-orb: rgba(232, 66, 76, 0.18);
+    --theme-shadow: rgba(27, 51, 104, 0.28);
+    --theme-shadow-hover: rgba(37, 67, 129, 0.34);
+    --theme-title: #f7f8ff;
+    --theme-accent-text: #98bdff;
+    --theme-chip-border: rgba(227, 72, 81, 0.22);
+    --theme-chip-bg: rgba(227, 72, 81, 0.11);
+    --theme-chip-color: #ffccd1;
+    --theme-date-border: rgba(108, 143, 255, 0.22);
+    --theme-date-bg: rgba(108, 143, 255, 0.1);
+    --theme-date-color: #c7daff;
+    --theme-button-border: rgba(108, 143, 255, 0.2);
+    --theme-button-bg: rgba(108, 143, 255, 0.11);
+    --theme-button-hover-bg: rgba(108, 143, 255, 0.16);
+    --theme-button-color: #f8fbff;
+    --theme-bullet-start: #9fc2ff;
+    --theme-bullet-end: #ea5b66;
+    --theme-bullet-shadow: rgba(108, 143, 255, 0.16);
+  }
+
+  .theme-card--bergen {
+    --theme-border: rgba(220, 176, 72, 0.3);
+    --theme-border-hover: rgba(237, 198, 102, 0.36);
+    --theme-bg-a: rgba(27, 22, 11, 0.84);
+    --theme-bg-b: rgba(9, 8, 7, 0.98);
+    --theme-orb: rgba(229, 187, 77, 0.2);
+    --theme-shadow: rgba(96, 70, 16, 0.26);
+    --theme-shadow-hover: rgba(116, 85, 20, 0.32);
+    --theme-title: #fff1c5;
+    --theme-accent-text: #f1cb72;
+    --theme-chip-border: rgba(222, 179, 77, 0.24);
+    --theme-chip-bg: rgba(222, 179, 77, 0.11);
+    --theme-chip-color: #ffe7aa;
+    --theme-date-border: rgba(222, 179, 77, 0.18);
+    --theme-date-bg: rgba(222, 179, 77, 0.08);
+    --theme-date-color: #f9dc94;
+    --theme-button-border: rgba(222, 179, 77, 0.2);
+    --theme-button-bg: rgba(222, 179, 77, 0.1);
+    --theme-button-hover-bg: rgba(222, 179, 77, 0.15);
+    --theme-button-color: #fff7e4;
+    --theme-bullet-start: #ffe29a;
+    --theme-bullet-end: #d3a33a;
+    --theme-bullet-shadow: rgba(222, 179, 77, 0.16);
+  }
+
   .cta-panel {
     border-color: rgba(218, 200, 255, 0.24);
     background:
