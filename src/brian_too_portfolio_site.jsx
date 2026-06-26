@@ -298,8 +298,8 @@ export default function BrianTooPortfolio() {
                 Taking the summer to work on three ambitious projects.
               </p>
               <div className="flex flex-wrap gap-5">
-                <TextLink href="https://cosquared.astar.inc">CoSquared</TextLink>
                 <TextLink href="https://astar.inc">ASTAR</TextLink>
+                <TextLink href="https://cosquared.astar.inc">CoSquared</TextLink>
                 <TextLink href="https://eternalbeing.io">EternalBeing.io</TextLink>
               </div>
             </div>
