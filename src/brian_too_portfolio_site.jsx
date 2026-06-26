@@ -293,7 +293,7 @@ export default function BrianTooPortfolio() {
           <div className="grid gap-8 border-t border-neutral-200 py-8 md:grid-cols-[0.9fr_1.5fr] md:gap-16">
             <span className="kicker">Current focus</span>
             <div className="grid gap-5">
-              <h2 className="text-2xl font-medium leading-snug tracking-tight text-[#0a0a0a]">Ace Collection</h2>
+              <h2 className="text-2xl font-medium leading-snug tracking-tight text-[#0a0a0a]">ACE Collection</h2>
               <p className="max-w-[620px] text-lg leading-8 text-neutral-500">
                 Taking the summer to work on three ambitious projects.
               </p>
