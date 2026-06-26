@@ -17,19 +17,6 @@ const navigationItems = [
   ["Community", "community"],
 ];
 
-const coreStack = [
-  "Python",
-  "TypeScript",
-  "React",
-  "Node.js",
-  "GraphQL",
-  "LLMs",
-  "RAG",
-  "Docker",
-  "C++",
-  "SQL",
-];
-
 const education = [
   {
     school: "Howard University",
@@ -306,18 +293,15 @@ export default function BrianTooPortfolio() {
           <div className="grid gap-8 border-t border-neutral-200 py-8 md:grid-cols-[0.9fr_1.5fr] md:gap-16">
             <span className="kicker">Current focus</span>
             <div className="grid gap-5">
-              <p className="max-w-[820px] text-2xl leading-snug tracking-tight text-[#0a0a0a]">
-                AI/ML engineering, LLM integrations, robotics autonomy, and full-stack systems that turn
-                research ideas into usable software.
+              <h2 className="text-2xl font-medium leading-snug tracking-tight text-[#0a0a0a]">Ace Collection</h2>
+              <p className="max-w-[620px] text-lg leading-8 text-neutral-500">
+                Taking the summer to work on three ambitious projects.
               </p>
-              <div className="flex flex-wrap gap-2">
-                {coreStack.map((item) => (
-                  <span key={item} className="pill">
-                    {item}
-                  </span>
-                ))}
+              <div className="flex flex-wrap gap-5">
+                <TextLink href="https://cosquared.astar.inc">CoSquared</TextLink>
+                <TextLink href="https://astar.inc">A-Star</TextLink>
+                <TextLink href="https://eternalbeing.io">EternalBeing.io</TextLink>
               </div>
-              <p className="text-sm text-neutral-500">{profile.location}</p>
             </div>
           </div>
         </section>
